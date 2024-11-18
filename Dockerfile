@@ -6,7 +6,7 @@ ENV FLUTTER_HOME=/root/sdks/flutter
 ENV FLUTTER_ROOT=$FLUTTER_HOME
 ENV PATH=${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 
-RUN apt update && apt install -y wget tar xz-utils
+RUN apt update && apt install -y wget tar curl git unzip xz-utils zip libglu1-mesa
 
 RUN mkdir -p ${FLUTTER_HOME}
 
