@@ -10,8 +10,9 @@ RUN apt update && apt install -y wget tar curl git unzip xz-utils zip libglu1-me
 
 RUN mkdir -p ${FLUTTER_HOME}
 
-RUN wget -q https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.24.5-stable.tar.xz
-RUN tar -xf ./flutter_linux_3.24.5-stable.tar.xz -C ${FLUTTER_HOME}
-RUN rm flutter_linux_3.24.5-stable.tar.xz
+#RUN wget -q https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.24.5-stable.tar.xz
+#RUN tar -xf ./flutter_linux_3.24.5-stable.tar.xz -C ${FLUTTER_HOME}
+#RUN rm flutter_linux_3.24.5-stable.tar.xz
+RUN git clone --depth 1 --branch 3.24.5 https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 
 RUN chown -R root:root ${FLUTTER_HOME}
