@@ -10,7 +10,7 @@ RUN apt update && apt install -y wget tar curl git unzip xz-utils zip libglu1-me
 
 RUN mkdir -p ${FLUTTER_HOME}
 
-RUN git clone --depth 1 --branch 3.24.5 https://github.com/flutter/flutter.git ${FLUTTER_HOME}
+RUN git clone --depth 1 --branch 3.27.0 https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 RUN flutter precache --web
 
 RUN chown -R root:root ${FLUTTER_HOME}
